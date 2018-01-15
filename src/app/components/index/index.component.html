@@ -1,0 +1,15 @@
+<div class="index-container shadow-volume">
+	<div *ngFor="let i of index">
+		<div *ngFor="let item of i">
+			<div *ngIf="item.level==mainLevel">
+				<app-index-looper
+					[parent]="item"
+					[level]="mainLevel + 1"
+					[items]="i"
+					[max]="max"
+				>
+				</app-index-looper>
+			</div>
+		</div>
+	</div>
+</div>
